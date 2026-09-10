@@ -56,9 +56,9 @@ function initSwiper() {
 
   new Swiper('.projects-swiper', {
     modules: [Navigation, Pagination],
-    slidesPerView: 1,
-    spaceBetween: 16,
-    centeredSlides: true,
+    slidesPerView: 1.2,
+    spaceBetween: 4,
+    centeredSlides: false,
     loop: false,
     navigation: {
       nextEl: '.swiper-button-next',
@@ -70,16 +70,20 @@ function initSwiper() {
     },
     breakpoints: {
       640: {
-        slidesPerView: 1.5,
-        spaceBetween: 20,
+        slidesPerView: 1.2,
+        spaceBetween: 8,
       },
       768: {
-        slidesPerView: 2,
-        spaceBetween: 24,
+        slidesPerView: 1.2,
+        spaceBetween: 12,
       },
       1024: {
-        slidesPerView: 2.5,
-        spaceBetween: 24,
+        slidesPerView: 1.2,
+        spaceBetween: 16,
+      },
+      1280: {
+        slidesPerView: 1.2,
+        spaceBetween: 20,
       },
     },
   })

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" href="/favicon.ico">
   <title>Projects - Ibrahim Arogundade</title>
   <meta name="title" content="Projects - Ibrahim Arogundade">
   <meta name="description" content="20+ hackathon wins. Cross-chain protocols, DeFi, oracles, lending, payments infrastructure.">
@@ -18,77 +18,55 @@
 
   <div class="flex flex-col min-h-screen">
     <header class="w-full border-b border-neutral-200 dark:border-neutral-800">
-      <nav class="max-w-3xl mx-auto px-4 py-4 flex items-center justify-between">
-        <a href="/" class="font-medium text-neutral-900 dark:text-neutral-100 no-underline hover:no-underline">
+      <nav class="max-w-3xl mx-auto px-4 py-3 sm:py-4 flex items-center justify-between">
+        <a href="/" class="font-medium text-base sm:text-lg text-neutral-900 dark:text-neutral-100 no-underline hover:no-underline">
           Ibrahim Arogundade
         </a>
-        <div class="flex items-center gap-6">
+        <div class="flex items-center gap-3 sm:gap-6">
           <ul class="hidden sm:flex items-center gap-4 text-sm">
             <li>
-              <a href="/about.html" class="transition-colors no-underline hover:underline text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100">
-                About
-              </a>
+              <a href="/about.html" class="transition-colors no-underline hover:underline text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100">About</a>
             </li>
             <li>
-              <a href="/projects.html" class="transition-colors no-underline hover:underline text-neutral-900 dark:text-neutral-100" aria-current="page">
-                Projects
-              </a>
+              <a href="/projects.html" class="transition-colors no-underline hover:underline text-neutral-900 dark:text-neutral-100" aria-current="page">Projects</a>
             </li>
           </ul>
           <button id="theme-toggle" type="button" class="p-2 rounded-md text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors" aria-label="Toggle dark mode">
-            <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
-            </svg>
-            <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
-            </svg>
+            <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+            <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
           </button>
           <button type="button" id="mobile-menu-btn" class="sm:hidden p-2 -mr-2 text-neutral-600 dark:text-neutral-400" aria-label="Toggle menu" aria-expanded="false">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
           </button>
         </div>
       </nav>
       <div id="mobile-menu" class="hidden sm:hidden border-t border-neutral-200 dark:border-neutral-800">
-        <ul class="px-4 py-3 space-y-2">
-          <li>
-            <a href="/" class="block py-2 transition-colors no-underline text-neutral-600 dark:text-neutral-400">
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="/about.html" class="block py-2 transition-colors no-underline text-neutral-600 dark:text-neutral-400">
-              About
-            </a>
-          </li>
-          <li>
-            <a href="/projects.html" class="block py-2 transition-colors no-underline text-neutral-900 dark:text-neutral-100 font-medium" aria-current="page">
-              Projects
-            </a>
-          </li>
+        <ul class="px-4 py-3 space-y-1">
+          <li><a href="/" class="block py-2 transition-colors no-underline text-neutral-600 dark:text-neutral-400">Home</a></li>
+          <li><a href="/about.html" class="block py-2 transition-colors no-underline text-neutral-600 dark:text-neutral-400">About</a></li>
+          <li><a href="/projects.html" class="block py-2 transition-colors no-underline text-neutral-900 dark:text-neutral-100 font-medium" aria-current="page">Projects</a></li>
         </ul>
       </div>
     </header>
 
-    <main id="main-content" class="flex-1 w-full max-w-3xl mx-auto px-4 py-8">
-      <h1 class="text-2xl font-semibold mb-8 text-neutral-900 dark:text-neutral-100">
+    <main id="main-content" class="flex-1 w-full max-w-3xl mx-auto px-4 py-6 sm:py-8">
+      <h1 class="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8 text-neutral-900 dark:text-neutral-100">
         Projects
       </h1>
 
-      <section class="mb-12">
-        <h2 class="text-lg font-medium mb-4 text-neutral-900 dark:text-neutral-100">
+      <section class="mb-8 sm:mb-12">
+        <h2 class="text-lg sm:text-xl font-medium mb-3 sm:mb-4 text-neutral-900 dark:text-neutral-100">
           Hackathon Winners
         </h2>
-        <ul class="space-y-6">
+        <ul class="space-y-4 sm:space-y-6">
           <li>
-            <a href="https://github.com/devarogundade/swaycall" target="_blank" rel="noopener noreferrer" class="group block p-4 -mx-4 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors no-underline">
-              <div class="flex items-start justify-between gap-4 mb-1">
-                <h3 class="font-medium text-neutral-900 dark:text-neutral-100 group-hover:underline">SwayCall</h3>
+            <a href="https://github.com/devarogundade/swaycall" target="_blank" rel="noopener noreferrer" class="group block p-3 sm:p-4 -mx-3 sm:-mx-4 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors no-underline">
+              <div class="flex items-start justify-between gap-3 sm:gap-4 mb-1">
+                <h3 class="font-medium text-sm sm:text-base text-neutral-900 dark:text-neutral-100 group-hover:underline">SwayCall</h3>
                 <span class="text-xs bg-neutral-200 dark:bg-neutral-800 px-1.5 py-0.5 rounded shrink-0">$15,000</span>
               </div>
-              <p class="text-sm text-neutral-500 dark:text-neutral-500 mb-2">Blockchain Interoperability — Fuel Network GMP Protocol</p>
-              <p class="text-sm text-neutral-600 dark:text-neutral-400">Blockchain interoperability infrastructure connecting Fuel Network with other chains. General messaging passing protocol with proof-of-stake consensus, transaction explorer, APIs, and UI.</p>
+              <p class="text-xs sm:text-sm text-neutral-500 dark:text-neutral-500 mb-2">Blockchain Interoperability — Fuel Network GMP Protocol</p>
+              <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">Blockchain interoperability infrastructure connecting Fuel Network with other chains. GMP protocol with proof-of-stake consensus, transaction explorer, APIs, and UI.</p>
               <div class="mt-3">
                 <div class="text-xs text-neutral-500 mb-2">Demo Video:</div>
                 <div class="relative w-full" style="padding-top: 56.25%;">
@@ -98,13 +76,13 @@
             </a>
           </li>
           <li>
-            <a href="https://github.com/devarogundade/feaeder" target="_blank" rel="noopener noreferrer" class="group block p-4 -mx-4 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors no-underline">
-              <div class="flex items-start justify-between gap-4 mb-1">
-                <h3 class="font-medium text-neutral-900 dark:text-neutral-100 group-hover:underline">Feæder</h3>
+            <a href="https://github.com/devarogundade/feaeder" target="_blank" rel="noopener noreferrer" class="group block p-3 sm:p-4 -mx-3 sm:-mx-4 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors no-underline">
+              <div class="flex items-start justify-between gap-3 sm:gap-4 mb-1">
+                <h3 class="font-medium text-sm sm:text-base text-neutral-900 dark:text-neutral-100 group-hover:underline">Feæder</h3>
                 <span class="text-xs bg-neutral-200 dark:bg-neutral-800 px-1.5 py-0.5 rounded shrink-0">$15,000</span>
               </div>
-              <p class="text-sm text-neutral-500 dark:text-neutral-500 mb-2">Decentralized Oracle Network — Æternity Blockchain</p>
-              <p class="text-sm text-neutral-600 dark:text-neutral-400">Push & oracle-based data feeds, Drand VRF for secure randomness, subscription system for managing multiple consuming contracts. Built with Vue.js, NestJS, Elixir, and Æternity smart contracts.</p>
+              <p class="text-xs sm:text-sm text-neutral-500 dark:text-neutral-500 mb-2">Decentralized Oracle Network — Æternity Blockchain</p>
+              <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">Push & oracle-based data feeds, Drand VRF for secure randomness, subscription system for managing multiple consuming contracts.</p>
               <div class="mt-3">
                 <div class="text-xs text-neutral-500 mb-2">Demo Video:</div>
                 <div class="relative w-full" style="padding-top: 56.25%;">
@@ -114,24 +92,24 @@
             </a>
           </li>
           <li>
-            <a href="https://github.com/devarogundade/orbital" target="_blank" rel="noopener noreferrer" class="group block p-4 -mx-4 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors no-underline">
-              <div class="flex items-start justify-between gap-4 mb-1">
-                <h3 class="font-medium text-neutral-900 dark:text-neutral-100 group-hover:underline">Orbital</h3>
+            <a href="https://github.com/devarogundade/orbital" target="_blank" rel="noopener noreferrer" class="group block p-3 sm:p-4 -mx-3 sm:-mx-4 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors no-underline">
+              <div class="flex items-start justify-between gap-3 sm:gap-4 mb-1">
+                <h3 class="font-medium text-sm sm:text-base text-neutral-900 dark:text-neutral-100 group-hover:underline">Orbital</h3>
                 <span class="text-xs bg-neutral-200 dark:bg-neutral-800 px-1.5 py-0.5 rounded shrink-0">$5,000</span>
               </div>
-              <p class="text-sm text-neutral-500 dark:text-neutral-500 mb-2">Cross-Chain Lending — Wormhole + Supra Oracles</p>
-              <p class="text-sm text-neutral-600 dark:text-neutral-400">Cross-chain lending platform leveraging Wormhole and Supra Oracles. One-click borrowing across SUI, Avalanche, and more with a unified DEX-like interface.</p>
-              <div class="mt-2"><span class="text-sm text-neutral-500">Live: </span><span class="text-sm">myorbital.xyz</span></div>
+              <p class="text-xs sm:text-sm text-neutral-500 dark:text-neutral-500 mb-2">Cross-Chain Lending — Wormhole + Supra Oracles</p>
+              <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">Cross-chain lending platform leveraging Wormhole and Supra Oracles. One-click borrowing across SUI, Avalanche, and more with a unified DEX-like interface.</p>
+              <div class="mt-2"><span class="text-xs sm:text-sm text-neutral-500">Live: </span><span class="text-xs sm:text-sm">myorbital.xyz</span></div>
             </a>
           </li>
           <li>
-            <a href="https://github.com/devarogundade/vefarmers" target="_blank" rel="noopener noreferrer" class="group block p-4 -mx-4 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors no-underline">
-              <div class="flex items-start justify-between gap-4 mb-1">
-                <h3 class="font-medium text-neutral-900 dark:text-neutral-100 group-hover:underline">VeFarmers</h3>
+            <a href="https://github.com/devarogundade/vefarmers" target="_blank" rel="noopener noreferrer" class="group block p-3 sm:p-4 -mx-3 sm:-mx-4 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors no-underline">
+              <div class="flex items-start justify-between gap-3 sm:gap-4 mb-1">
+                <h3 class="font-medium text-sm sm:text-base text-neutral-900 dark:text-neutral-100 group-hover:underline">VeFarmers</h3>
                 <span class="text-xs bg-neutral-200 dark:bg-neutral-800 px-1.5 py-0.5 rounded shrink-0">$5,000</span>
               </div>
-              <p class="text-sm text-neutral-500 dark:text-neutral-500 mb-2">Community Micro-Lending — VeChain (UN SDG 2)</p>
-              <p class="text-sm text-neutral-600 dark:text-neutral-400">Community-backed micro-lending platform on VeChain advancing UN SDG 2. Farmers access fair loans, community members earn B3TR tokens for VET pledges. React + Vite + VeChainKit + Solidity.</p>
+              <p class="text-xs sm:text-sm text-neutral-500 dark:text-neutral-500 mb-2">Community Micro-Lending — VeChain (UN SDG 2)</p>
+              <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">Community-backed micro-lending platform on VeChain advancing UN SDG 2. Farmers access fair loans, community members earn B3TR tokens for VET pledges.</p>
               <div class="mt-3">
                 <div class="text-xs text-neutral-500 mb-2">Demo Video:</div>
                 <div class="relative w-full" style="padding-top: 56.25%;">
@@ -143,30 +121,30 @@
         </ul>
       </section>
 
-      <section class="mb-12">
-        <h2 class="text-lg font-medium mb-4 text-neutral-900 dark:text-neutral-100">
+      <section class="mb-8 sm:mb-12">
+        <h2 class="text-lg sm:text-xl font-medium mb-3 sm:mb-4 text-neutral-900 dark:text-neutral-100">
           DeFi & Blockchain
         </h2>
-        <ul class="space-y-6">
+        <ul class="space-y-4 sm:space-y-6">
           <li>
-            <a href="https://github.com/BackstopLabs/fall-hackathon" target="_blank" rel="noopener noreferrer" class="group block p-4 -mx-4 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors no-underline">
-              <div class="flex items-start justify-between gap-4 mb-1">
-                <h3 class="font-medium text-neutral-900 dark:text-neutral-100 group-hover:underline">Backstop</h3>
+            <a href="https://github.com/BackstopLabs/fall-hackathon" target="_blank" rel="noopener noreferrer" class="group block p-3 sm:p-4 -mx-3 sm:-mx-4 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors no-underline">
+              <div class="flex items-start justify-between gap-3 sm:gap-4 mb-1">
+                <h3 class="font-medium text-sm sm:text-base text-neutral-900 dark:text-neutral-100 group-hover:underline">Backstop</h3>
                 <span class="text-xs text-neutral-500 shrink-0">Research</span>
               </div>
-              <p class="text-sm text-neutral-500 dark:text-neutral-500 mb-2">Proof-Triggered Parametric Insurance for DeFi</p>
-              <p class="text-sm text-neutral-600 dark:text-neutral-400">Parametric insurance protocol covering on-chain risk — DeFi liquidations, RWA defaults, DePIN uptime shortfalls, gaming exploits. Settlement on Creditcoin Testnet, source chains via Ethereum Sepolia (Aave v3). Uses Attestcoin Block Prover precompile (0x0FD2) for proof-triggered payouts.</p>
-              <div class="mt-2"><span class="text-sm text-neutral-500">Whitepaper: </span><span class="text-sm">backstop-cc3.vercel.app/whitepaper.pdf</span></div>
+              <p class="text-xs sm:text-sm text-neutral-500 dark:text-neutral-500 mb-2">Proof-Triggered Parametric Insurance for DeFi</p>
+              <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">Parametric insurance protocol covering on-chain risk — DeFi liquidations, RWA defaults, DePIN uptime shortfalls, gaming exploits. Settlement on Creditcoin Testnet.</p>
+              <div class="mt-2"><span class="text-xs sm:text-sm text-neutral-500">Whitepaper: </span><span class="text-xs sm:text-sm">backstop-cc3.vercel.app/whitepaper.pdf</span></div>
             </a>
           </li>
           <li>
-            <a href="https://github.com/devarogundade/greenback" target="_blank" rel="noopener noreferrer" class="group block p-4 -mx-4 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors no-underline">
-              <div class="flex items-start justify-between gap-4 mb-1">
-                <h3 class="font-medium text-neutral-900 dark:text-neutral-100 group-hover:underline">GreenBack</h3>
+            <a href="https://github.com/devarogundade/greenback" target="_blank" rel="noopener noreferrer" class="group block p-3 sm:p-4 -mx-3 sm:-mx-4 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors no-underline">
+              <div class="flex items-start justify-between gap-3 sm:gap-4 mb-1">
+                <h3 class="font-medium text-sm sm:text-base text-neutral-900 dark:text-neutral-100 group-hover:underline">GreenBack</h3>
                 <span class="text-xs text-neutral-500 shrink-0">Research</span>
               </div>
-              <p class="text-sm text-neutral-500 dark:text-neutral-500 mb-2">Smart Reverse Vending Machine — Aptos Blockchain</p>
-              <p class="text-sm text-neutral-600 dark:text-neutral-400">Smart reverse vending machine accepting recyclable plastic bottles. Users earn $GCoin via RFID/QR, AI-powered waste sorting, manage earnings through Aptos wallet. Donate to charities or swap for APT.</p>
+              <p class="text-xs sm:text-sm text-neutral-500 dark:text-neutral-500 mb-2">Smart Reverse Vending Machine — Aptos Blockchain</p>
+              <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">Smart reverse vending machine accepting recyclable plastic bottles. Users earn $GCoin via RFID/QR, AI-powered waste sorting, manage earnings through Aptos wallet.</p>
               <div class="mt-3">
                 <div class="text-xs text-neutral-500 mb-2">Demo Video:</div>
                 <div class="relative w-full" style="padding-top: 56.25%;">
@@ -178,129 +156,129 @@
         </ul>
       </section>
 
-      <section class="mb-12">
-        <h2 class="text-lg font-medium mb-4 text-neutral-900 dark:text-neutral-100">
+      <section class="mb-8 sm:mb-12">
+        <h2 class="text-lg sm:text-xl font-medium mb-3 sm:mb-4 text-neutral-900 dark:text-neutral-100">
           Platforms & Products
         </h2>
-        <ul class="space-y-6">
+        <ul class="space-y-4 sm:space-y-6">
           <li>
-            <a href="https://cleanmatedao.com" target="_blank" rel="noopener noreferrer" class="group block p-4 -mx-4 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors no-underline">
-              <div class="flex items-center gap-3 mb-2">
-                <img src="/assets/cleanmate-logo.png" alt="Cleanmate" class="h-10 rounded-lg">
-                <div class="flex-1">
-                  <div class="flex items-start justify-between gap-4">
-                    <h3 class="font-medium text-neutral-900 dark:text-neutral-100 group-hover:underline">Cleanmate</h3>
+            <a href="https://cleanmatedao.com" target="_blank" rel="noopener noreferrer" class="group block p-3 sm:p-4 -mx-3 sm:-mx-4 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors no-underline">
+              <div class="flex items-center gap-2 sm:gap-3 mb-2">
+                <img src="/assets/cleanmate-logo.png" alt="Cleanmate" class="h-8 sm:h-10 rounded-lg">
+                <div class="flex-1 min-w-0">
+                  <div class="flex items-start justify-between gap-2 sm:gap-4">
+                    <h3 class="font-medium text-sm sm:text-base text-neutral-900 dark:text-neutral-100 group-hover:underline">Cleanmate</h3>
                     <span class="text-xs text-neutral-500 shrink-0">Dec 2023 - Apr 2026</span>
                   </div>
                 </div>
               </div>
-              <p class="text-sm text-neutral-500 dark:text-neutral-500 mb-2">Founder — Impact-to-Earn Platform (VeChain)</p>
-              <p class="text-sm text-neutral-600 dark:text-neutral-400">Impact-to-earn platform rewarding verified environmental action with on-chain B3TR tokens. 385+ organized events, 2,600+ active participants, 50,551 reels, 199k+ B3TR distributed. Partnered with VeChain (VeBetterDAO) and NGOs. React + Node.js + VeChain SDK + Firestore + Gemini AI.</p>
+              <p class="text-xs sm:text-sm text-neutral-500 dark:text-neutral-500 mb-2">Founder — Impact-to-Earn Platform (VeChain)</p>
+              <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">Impact-to-earn platform rewarding verified environmental action with on-chain B3TR tokens. 385+ organized events, 2,600+ active participants, 199k+ B3TR distributed.</p>
               <img src="/assets/cleanmate-banner.png" alt="Cleanmate Platform" class="w-full rounded-lg mt-3" loading="lazy">
             </a>
           </li>
           <li>
-            <a href="https://santabrowser.com" target="_blank" rel="noopener noreferrer" class="group block p-4 -mx-4 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors no-underline">
-              <div class="flex items-center gap-3 mb-2">
-                <img src="/assets/santabrowser-logo.png" alt="Santa Browser" class="h-10 rounded-lg">
-                <div class="flex-1">
-                  <div class="flex items-start justify-between gap-4">
-                    <h3 class="font-medium text-neutral-900 dark:text-neutral-100 group-hover:underline">Santa Browser</h3>
+            <a href="https://santabrowser.com" target="_blank" rel="noopener noreferrer" class="group block p-3 sm:p-4 -mx-3 sm:-mx-4 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors no-underline">
+              <div class="flex items-center gap-2 sm:gap-3 mb-2">
+                <img src="/assets/santabrowser-logo.png" alt="Santa Browser" class="h-8 sm:h-10 rounded-lg">
+                <div class="flex-1 min-w-0">
+                  <div class="flex items-start justify-between gap-2 sm:gap-4">
+                    <h3 class="font-medium text-sm sm:text-base text-neutral-900 dark:text-neutral-100 group-hover:underline">Santa Browser</h3>
                     <span class="text-xs text-neutral-500 shrink-0">Oct 2023 - Present</span>
                   </div>
                 </div>
               </div>
-              <p class="text-sm text-neutral-500 dark:text-neutral-500 mb-2">Backend & Blockchain Developer — Privacy-Focused Web3 Browser</p>
-              <p class="text-sm text-neutral-600 dark:text-neutral-400">Ungoogled Chromium fork with integrated ad blocker, tracker blocker, and Web3 features. Backend and blockchain integration services for the browser's privacy-first ecosystem.</p>
+              <p class="text-xs sm:text-sm text-neutral-500 dark:text-neutral-500 mb-2">Backend & Blockchain Developer — Privacy-Focused Web3 Browser</p>
+              <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">Ungoogled Chromium fork with integrated ad blocker, tracker blocker, and Web3 features.</p>
             </a>
           </li>
           <li>
-            <a href="https://cleanmatedao.com" target="_blank" rel="noopener noreferrer" class="group block p-4 -mx-4 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors no-underline">
-              <div class="flex items-center gap-3 mb-2">
-                <img src="/assets/smarthex-logo.png" alt="SmartHex" class="h-10 rounded-lg">
-                <div class="flex-1">
-                  <div class="flex items-start justify-between gap-4">
-                    <h3 class="font-medium text-neutral-900 dark:text-neutral-100 group-hover:underline">SmartHex</h3>
+            <a href="https://cleanmatedao.com" target="_blank" rel="noopener noreferrer" class="group block p-3 sm:p-4 -mx-3 sm:-mx-4 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors no-underline">
+              <div class="flex items-center gap-2 sm:gap-3 mb-2">
+                <img src="/assets/smarthex-logo.png" alt="SmartHex" class="h-8 sm:h-10 rounded-lg">
+                <div class="flex-1 min-w-0">
+                  <div class="flex items-start justify-between gap-2 sm:gap-4">
+                    <h3 class="font-medium text-sm sm:text-base text-neutral-900 dark:text-neutral-100 group-hover:underline">SmartHex</h3>
                     <span class="text-xs text-neutral-500 shrink-0">Feb 2022 - Aug 2023</span>
                   </div>
                 </div>
               </div>
-              <p class="text-sm text-neutral-500 dark:text-neutral-500 mb-2">Smart Contract Engineer — Real-Estate Tokenization (BSC)</p>
-              <p class="text-sm text-neutral-600 dark:text-neutral-400">Decentralized platform for tokenizing real estates in West Africa on BNB Smart Chain. Designed and implemented smart contracts for fractionalized ownership, issuance, and transfer logic.</p>
+              <p class="text-xs sm:text-sm text-neutral-500 dark:text-neutral-500 mb-2">Smart Contract Engineer — Real-Estate Tokenization (BSC)</p>
+              <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">Decentralized platform for tokenizing real estates in West Africa on BNB Smart Chain.</p>
             </a>
           </li>
           <li>
-            <a href="https://cruxofafrica.com" target="_blank" rel="noopener noreferrer" class="group block p-4 -mx-4 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors no-underline">
-              <div class="flex items-center gap-3 mb-2">
-                <img src="/assets/crux-logo.png" alt="Crux of Africa" class="h-10 rounded-lg">
-                <div class="flex-1">
-                  <div class="flex items-start justify-between gap-4">
-                    <h3 class="font-medium text-neutral-900 dark:text-neutral-100 group-hover:underline">Crux of Africa</h3>
+            <a href="https://cruxofafrica.com" target="_blank" rel="noopener noreferrer" class="group block p-3 sm:p-4 -mx-3 sm:-mx-4 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors no-underline">
+              <div class="flex items-center gap-2 sm:gap-3 mb-2">
+                <img src="/assets/crux-logo.png" alt="Crux of Africa" class="h-8 sm:h-10 rounded-lg">
+                <div class="flex-1 min-w-0">
+                  <div class="flex items-start justify-between gap-2 sm:gap-4">
+                    <h3 class="font-medium text-sm sm:text-base text-neutral-900 dark:text-neutral-100 group-hover:underline">Crux of Africa</h3>
                     <span class="text-xs text-neutral-500 shrink-0">May 2020 - Sep 2021</span>
                   </div>
                 </div>
               </div>
-              <p class="text-sm text-neutral-500 dark:text-neutral-500 mb-2">Frontend Developer — Sustainable Development Nonprofit</p>
-              <p class="text-sm text-neutral-600 dark:text-neutral-400">Sustainable-development nonprofit connecting farmers to low-interest financing, housing, farm machineries and fertilizers. Built the user-facing web application for a low-bandwidth, low-tech-literacy user base.</p>
+              <p class="text-xs sm:text-sm text-neutral-500 dark:text-neutral-500 mb-2">Frontend Developer — Sustainable Development Nonprofit</p>
+              <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">Sustainable-development nonprofit connecting farmers to low-interest financing, housing, farm machineries and fertilizers.</p>
             </a>
           </li>
         </ul>
       </section>
 
-      <section class="mb-12">
-        <h2 class="text-lg font-medium mb-4 text-neutral-900 dark:text-neutral-100">
+      <section class="mb-8 sm:mb-12">
+        <h2 class="text-lg sm:text-xl font-medium mb-3 sm:mb-4 text-neutral-900 dark:text-neutral-100">
           Open Source
         </h2>
-        <ul class="space-y-4">
+        <ul class="space-y-3 sm:space-y-4">
           <li>
-            <a href="https://github.com/devarogundade/swaycall" target="_blank" rel="noopener noreferrer" class="group flex items-start justify-between gap-4 p-4 -mx-4 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors no-underline">
-              <div>
-                <h3 class="font-medium text-neutral-900 dark:text-neutral-100 group-hover:underline">swaycall</h3>
-                <p class="text-sm text-neutral-600 dark:text-neutral-400 mt-1">Blockchain interoperability infrastructure for Fuel Network. GMP protocol with PoS consensus.</p>
+            <a href="https://github.com/devarogundade/swaycall" target="_blank" rel="noopener noreferrer" class="group flex items-start justify-between gap-3 sm:gap-4 p-3 sm:p-4 -mx-3 sm:-mx-4 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors no-underline">
+              <div class="min-w-0">
+                <h3 class="font-medium text-sm sm:text-base text-neutral-900 dark:text-neutral-100 group-hover:underline">swaycall</h3>
+                <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mt-1">Blockchain interoperability infrastructure for Fuel Network. GMP protocol with PoS consensus.</p>
               </div>
-              <span class="text-sm text-neutral-500 shrink-0">$15k</span>
+              <span class="text-xs sm:text-sm text-neutral-500 shrink-0">$15k</span>
             </a>
           </li>
           <li>
-            <a href="https://github.com/devarogundade/feaeder" target="_blank" rel="noopener noreferrer" class="group flex items-start justify-between gap-4 p-4 -mx-4 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors no-underline">
-              <div>
-                <h3 class="font-medium text-neutral-900 dark:text-neutral-100 group-hover:underline">feaeder</h3>
-                <p class="text-sm text-neutral-600 dark:text-neutral-400 mt-1">Decentralized oracle network on Æternity. Data feeds + VRF.</p>
+            <a href="https://github.com/devarogundade/feaeder" target="_blank" rel="noopener noreferrer" class="group flex items-start justify-between gap-3 sm:gap-4 p-3 sm:p-4 -mx-3 sm:-mx-4 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors no-underline">
+              <div class="min-w-0">
+                <h3 class="font-medium text-sm sm:text-base text-neutral-900 dark:text-neutral-100 group-hover:underline">feaeder</h3>
+                <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mt-1">Decentralized oracle network on Æternity. Data feeds + VRF.</p>
               </div>
-              <span class="text-sm text-neutral-500 shrink-0">$15k</span>
+              <span class="text-xs sm:text-sm text-neutral-500 shrink-0">$15k</span>
             </a>
           </li>
           <li>
-            <a href="https://github.com/devarogundade/orbital" target="_blank" rel="noopener noreferrer" class="group flex items-start justify-between gap-4 p-4 -mx-4 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors no-underline">
-              <div>
-                <h3 class="font-medium text-neutral-900 dark:text-neutral-100 group-hover:underline">orbital</h3>
-                <p class="text-sm text-neutral-600 dark:text-neutral-400 mt-1">Cross-chain lending platform. Wormhole + Supra Oracles.</p>
+            <a href="https://github.com/devarogundade/orbital" target="_blank" rel="noopener noreferrer" class="group flex items-start justify-between gap-3 sm:gap-4 p-3 sm:p-4 -mx-3 sm:-mx-4 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors no-underline">
+              <div class="min-w-0">
+                <h3 class="font-medium text-sm sm:text-base text-neutral-900 dark:text-neutral-100 group-hover:underline">orbital</h3>
+                <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mt-1">Cross-chain lending platform. Wormhole + Supra Oracles.</p>
               </div>
-              <span class="text-sm text-neutral-500 shrink-0">$5k</span>
+              <span class="text-xs sm:text-sm text-neutral-500 shrink-0">$5k</span>
             </a>
           </li>
           <li>
-            <a href="https://github.com/devarogundade/vefarmers" target="_blank" rel="noopener noreferrer" class="group flex items-start justify-between gap-4 p-4 -mx-4 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors no-underline">
-              <div>
-                <h3 class="font-medium text-neutral-900 dark:text-neutral-100 group-hover:underline">vefarmers</h3>
-                <p class="text-sm text-neutral-600 dark:text-neutral-400 mt-1">Community-backed micro-lending on VeChain. UN SDG 2.</p>
+            <a href="https://github.com/devarogundade/vefarmers" target="_blank" rel="noopener noreferrer" class="group flex items-start justify-between gap-3 sm:gap-4 p-3 sm:p-4 -mx-3 sm:-mx-4 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors no-underline">
+              <div class="min-w-0">
+                <h3 class="font-medium text-sm sm:text-base text-neutral-900 dark:text-neutral-100 group-hover:underline">vefarmers</h3>
+                <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mt-1">Community-backed micro-lending on VeChain. UN SDG 2.</p>
               </div>
-              <span class="text-sm text-neutral-500 shrink-0">$5k</span>
+              <span class="text-xs sm:text-sm text-neutral-500 shrink-0">$5k</span>
             </a>
           </li>
           <li>
-            <a href="https://github.com/devarogundade/greenback" target="_blank" rel="noopener noreferrer" class="group flex items-start justify-between gap-4 p-4 -mx-4 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors no-underline">
-              <div>
-                <h3 class="font-medium text-neutral-900 dark:text-neutral-100 group-hover:underline">greenback</h3>
-                <p class="text-sm text-neutral-600 dark:text-neutral-400 mt-1">Smart reverse vending machine. Aptos blockchain + AI sorting.</p>
+            <a href="https://github.com/devarogundade/greenback" target="_blank" rel="noopener noreferrer" class="group flex items-start justify-between gap-3 sm:gap-4 p-3 sm:p-4 -mx-3 sm:-mx-4 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors no-underline">
+              <div class="min-w-0">
+                <h3 class="font-medium text-sm sm:text-base text-neutral-900 dark:text-neutral-100 group-hover:underline">greenback</h3>
+                <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mt-1">Smart reverse vending machine. Aptos blockchain + AI sorting.</p>
               </div>
             </a>
           </li>
           <li>
-            <a href="https://github.com/BackstopLabs/fall-hackathon" target="_blank" rel="noopener noreferrer" class="group flex items-start justify-between gap-4 p-4 -mx-4 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors no-underline">
-              <div>
-                <h3 class="font-medium text-neutral-900 dark:text-neutral-100 group-hover:underline">backstop</h3>
-                <p class="text-sm text-neutral-600 dark:text-neutral-400 mt-1">Proof-triggered parametric insurance for DeFi. Creditcoin + Attestcoin.</p>
+            <a href="https://github.com/BackstopLabs/fall-hackathon" target="_blank" rel="noopener noreferrer" class="group flex items-start justify-between gap-3 sm:gap-4 p-3 sm:p-4 -mx-3 sm:-mx-4 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors no-underline">
+              <div class="min-w-0">
+                <h3 class="font-medium text-sm sm:text-base text-neutral-900 dark:text-neutral-100 group-hover:underline">backstop</h3>
+                <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mt-1">Proof-triggered parametric insurance for DeFi. Creditcoin + Attestcoin.</p>
               </div>
             </a>
           </li>
@@ -308,11 +286,11 @@
       </section>
     </main>
 
-    <footer class="w-full border-t border-neutral-200 dark:border-neutral-800 mt-16">
-      <div class="max-w-3xl mx-auto px-4 py-8">
-        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-neutral-500 dark:text-neutral-400">
+    <footer class="w-full border-t border-neutral-200 dark:border-neutral-800 mt-8 sm:mt-16">
+      <div class="max-w-3xl mx-auto px-4 py-6 sm:py-8">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 text-xs sm:text-sm text-neutral-500 dark:text-neutral-400">
           <p>© 2026 Ibrahim Arogundade</p>
-          <div class="flex items-center gap-4">
+          <div class="flex items-center gap-3 sm:gap-4">
             <a href="https://github.com/devarogundade" target="_blank" rel="noopener noreferrer" class="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors no-underline hover:underline">GitHub</a>
             <a href="mailto:devarogundade@gmail.com" class="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors no-underline hover:underline">Email</a>
           </div>

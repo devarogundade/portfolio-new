@@ -5,10 +5,20 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: clip;
+    max-width: 100vw;
   }
 
   body {
     @apply min-h-screen bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100;
+    overflow-x: clip;
+    max-width: 100vw;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  img, video, iframe {
+    max-width: 100%;
   }
 
   .skip-link {
@@ -22,31 +32,32 @@
 
 @layer components {
   .prose h1 {
-    @apply text-3xl font-bold mb-4 text-neutral-900 dark:text-neutral-100;
+    @apply text-2xl sm:text-3xl font-bold mb-4 text-neutral-900 dark:text-neutral-100;
   }
 
   .prose h2 {
-    @apply text-xl font-semibold mt-8 mb-4 text-neutral-900 dark:text-neutral-100;
+    @apply text-xl sm:text-xl font-semibold mt-6 sm:mt-8 mb-4 text-neutral-900 dark:text-neutral-100;
   }
 
   .prose h3 {
-    @apply text-lg font-medium mt-6 mb-2 text-neutral-900 dark:text-neutral-100;
+    @apply text-base sm:text-lg font-medium mt-4 sm:mt-6 mb-2 text-neutral-900 dark:text-neutral-100;
   }
 
   .prose p {
-    @apply mb-4 text-neutral-600 dark:text-neutral-400 leading-relaxed;
+    @apply mb-4 text-neutral-600 dark:text-neutral-400 leading-relaxed text-sm sm:text-base;
   }
 
   .prose ul {
-    @apply mb-4 list-disc pl-6 space-y-2;
+    @apply mb-4 list-disc pl-5 sm:pl-6 space-y-2;
   }
 
   .prose li {
-    @apply text-neutral-600 dark:text-neutral-400;
+    @apply text-neutral-600 dark:text-neutral-400 text-sm sm:text-base;
   }
 
   .prose a {
     @apply text-neutral-900 dark:text-neutral-100 underline hover:text-neutral-600 dark:hover:text-neutral-400 transition-colors;
+    overflow-wrap: break-word;
   }
 
   .prose strong {
@@ -55,20 +66,52 @@
 }
 
 .projects-swiper {
-  @apply pb-12;
+  overflow: hidden !important;
+  max-width: 100%;
+  padding-bottom: 40px;
+}
+
+.projects-swiper .swiper-wrapper {
+  overflow: visible;
 }
 
 .projects-swiper .swiper-slide {
   @apply opacity-50 transition-opacity duration-300;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .projects-swiper .swiper-slide-active {
   @apply opacity-100;
 }
 
+.projects-swiper .swiper-slide .border {
+  @apply min-h-[300px];
+}
+
+@media (min-width: 640px) {
+  .projects-swiper .swiper-slide .border {
+    @apply min-h-[400px];
+  }
+}
+
+@media (min-width: 768px) {
+  .projects-swiper .swiper-slide .border {
+    @apply min-h-[450px];
+  }
+}
+
 .projects-swiper .swiper-button-next,
 .projects-swiper .swiper-button-prev {
   @apply text-neutral-400 dark:text-neutral-600;
+  display: none !important;
+}
+
+@media (min-width: 640px) {
+  .projects-swiper .swiper-button-next,
+  .projects-swiper .swiper-button-prev {
+    display: block !important;
+  }
 }
 
 .projects-swiper .swiper-button-next:hover,
@@ -76,10 +119,14 @@
   @apply text-neutral-900 dark:text-neutral-100;
 }
 
+.projects-swiper .swiper-pagination {
+  @apply relative;
+}
+
 .projects-swiper .swiper-pagination-bullet {
   @apply bg-neutral-300 dark:bg-neutral-700;
 }
 
 .projects-swiper .swiper-pagination-bullet-active {
-  @apply bg-neutral-900 dark:bg-neutral-100;
+  @apply bg-neutral-900 dark:text-neutral-100;
 }
