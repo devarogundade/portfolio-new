@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply min-h-screen bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100;
+  }
+
+  .skip-link {
+    @apply absolute -top-full left-0 z-50 bg-white px-4 py-2 text-sm font-medium text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100;
+  }
+
+  .skip-link:focus {
+    @apply top-0;
+  }
+}
+
+@layer components {
+  .prose h1 {
+    @apply text-3xl font-bold mb-4 text-neutral-900 dark:text-neutral-100;
+  }
+
+  .prose h2 {
+    @apply text-xl font-semibold mt-8 mb-4 text-neutral-900 dark:text-neutral-100;
+  }
+
+  .prose h3 {
+    @apply text-lg font-medium mt-6 mb-2 text-neutral-900 dark:text-neutral-100;
+  }
+
+  .prose p {
+    @apply mb-4 text-neutral-600 dark:text-neutral-400 leading-relaxed;
+  }
+
+  .prose ul {
+    @apply mb-4 list-disc pl-6 space-y-2;
+  }
+
+  .prose li {
+    @apply text-neutral-600 dark:text-neutral-400;
+  }
+
+  .prose a {
+    @apply text-neutral-900 dark:text-neutral-100 underline hover:text-neutral-600 dark:hover:text-neutral-400 transition-colors;
+  }
+
+  .prose strong {
+    @apply font-semibold text-neutral-900 dark:text-neutral-100;
+  }
+}
+
+.projects-swiper {
+  @apply pb-12;
+}
+
+.projects-swiper .swiper-slide {
+  @apply opacity-50 transition-opacity duration-300;
+}
+
+.projects-swiper .swiper-slide-active {
+  @apply opacity-100;
+}
+
+.projects-swiper .swiper-button-next,
+.projects-swiper .swiper-button-prev {
+  @apply text-neutral-400 dark:text-neutral-600;
+}
+
+.projects-swiper .swiper-button-next:hover,
+.projects-swiper .swiper-button-prev:hover {
+  @apply text-neutral-900 dark:text-neutral-100;
+}
+
+.projects-swiper .swiper-pagination-bullet {
+  @apply bg-neutral-300 dark:bg-neutral-700;
+}
+
+.projects-swiper .swiper-pagination-bullet-active {
+  @apply bg-neutral-900 dark:bg-neutral-100;
+}
