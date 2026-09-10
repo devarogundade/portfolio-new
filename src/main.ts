@@ -54,13 +54,15 @@ function initSwiper() {
   const el = document.querySelector('.projects-swiper')
   if (!el) return
 
+  const isMobile = window.innerWidth < 640
+
   new Swiper('.projects-swiper', {
     modules: [Navigation, Pagination],
-    slidesPerView: 1.2,
-    spaceBetween: 4,
+    slidesPerView: 1.15,
+    spaceBetween: 8,
     centeredSlides: false,
     loop: false,
-    navigation: {
+    navigation: isMobile ? false : {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
@@ -71,19 +73,23 @@ function initSwiper() {
     breakpoints: {
       640: {
         slidesPerView: 1.2,
-        spaceBetween: 8,
+        spaceBetween: 12,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
       },
       768: {
         slidesPerView: 1.2,
-        spaceBetween: 12,
+        spaceBetween: 16,
       },
       1024: {
         slidesPerView: 1.2,
-        spaceBetween: 16,
+        spaceBetween: 20,
       },
       1280: {
         slidesPerView: 1.2,
-        spaceBetween: 20,
+        spaceBetween: 24,
       },
     },
   })
